@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+<meta charset="UTF-8" />
+<title>Sprint Management Console</title>
+
+</head>
+<h:body>
+	<ui:include src="header.xhtml"></ui:include>
+	<h1>Hello Student</h1>
+	
+	<h:form>
+		<h:dataTable value="#{dashboardBean.students}" var="student" border="2"
+			cellspacing="1" cellpadding="1">
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+                    #{student.id}
+                </h:column>
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+                    #{student.name}
+                </h:column>
+			<h:column>
+				<f:facet name="header">Email</f:facet>
+                    #{student.email}
+                </h:column>
+			<h:column>
+				<f:facet name="header">Is_active</f:facet>
+                    #{student.is_active}
+                </h:column>
+			</h:dataTable>
+	</h:form>
+	
+</h:body>
+</html>
